@@ -45,7 +45,7 @@ namespace FormulaOne.Api.Controllers
         }
 
         [HttpPut("")]
-        public async Task<IActionResult> UpdateAchievement([FromBody] CreateDriverAchievementRequest request)
+        public async Task<IActionResult> UpdateAchievement([FromBody] UpdateDriverAchievementRequest request)
         {
             if (!ModelState.IsValid)
             {
