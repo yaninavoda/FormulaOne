@@ -8,9 +8,9 @@ namespace FormulaOne.DataService.Repositories.Interfaces
 {
     public interface IUnitOfWork
     {
-        IDriverRepository DriverRepository { get; }
-        IAchievementsRepository AchievementsRepository { get; }
+        IDriverRepository Drivers { get; }
+        IAchievementsRepository Achievements { get; }
 
-        Task CompleteAsync();
+        Task<bool> CompleteAsync();
     }
 }
