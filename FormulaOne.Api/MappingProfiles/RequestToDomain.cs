@@ -17,6 +17,14 @@ namespace FormulaOne.Api.MappingProfiles
             CreateMap<UpdateDriverAchievementRequest, Achievement>()
                 .ForMember(x => x.RaceWins, options => options.MapFrom(src => src.Wins))
                 .ForMember(x => x.UpdatedDate, options => options.MapFrom(src => DateTime.UtcNow));
+
+            CreateMap<CreateDriverRequest, Driver>()
+                .ForMember(dest => dest.Status, options => options.MapFrom(src => 1))
+                .ForMember(dest => dest.AddedDate, options => options.MapFrom(src => DateTime.UtcNow))
+                .ForMember(dest => dest.UpdatedDate, options => options.MapFrom(src => DateTime.UtcNow));
+
+            CreateMap<UpdateDriverRequest, Driver>()
+                .ForMember(dest => dest.UpdatedDate, options => options.MapFrom(src => DateTime.UtcNow));
         }
     }
 }
