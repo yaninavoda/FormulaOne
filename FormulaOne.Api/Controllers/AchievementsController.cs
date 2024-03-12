@@ -7,9 +7,7 @@ namespace FormulaOne.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BaseController(IUnitOfWork unitOfWork, IMapper mapper) : ControllerBase
+    public class AchievementsController(IUnitOfWork unitOfWork, IMapper mapper) : BaseController(unitOfWork, mapper)
     {
-        protected readonly IUnitOfWork _unitOfWork = unitOfWork;
-        protected readonly IMapper _mapper = mapper;
     }
 }
