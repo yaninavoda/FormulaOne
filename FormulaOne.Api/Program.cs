@@ -1,4 +1,5 @@
 using FormulaOne.DataService.Data;
+using FormulaOne.DataService.Repositories;
 using FormulaOne.DataService.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IUnitOfWork, IUnitOfWork>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
